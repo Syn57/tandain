@@ -21,4 +21,14 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tandain"
 include(":app")
- 
+include(":core")
+include(":core:network")
+include(":core:database")
+include(":core:common")
+include(":core:data")
+include(":core:domain")
+include(":core:model")
+include(":core:uiresources")
+include(":feature")
+include(":feature:routefinder")
+include(":feature:finance")
