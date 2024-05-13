@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-src")
     repositories {
         google {
             content {
@@ -20,6 +21,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Tandain"
+
 include(":app")
 include(":core")
 include(":core:network")
