@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.Tandain" parent="Base.Theme.Tandain" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/inset_splashscreen</item>
+        <item name="postSplashScreenTheme">@style/Theme.Tandain</item>
+    </style>
+
 </resources>

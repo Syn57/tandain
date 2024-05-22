@@ -9,3 +9,4 @@
    Duplicate class org.intellij.lang.annotations.Identifier found in modules annotations-12.0.jar -> annotations-12.0 (com.intellij:annotations:12.0) and annotations-23.0.0.jar -> annotations-23.0.0 (org.jetbrains:annotations:23.0.0)
    ```
    *Solution*: Change from ``implementation(libs.androidx.room.compiler)`` to ``annotationProcessor(libs.com.github.chuckerteam.chucker.library) releaseImplementation(libs.com.github.chuckerteam.chucker.library.no.op)``
+3. To access `projects` property in build.gradle, this code `enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")` should be added in setting.gradle.kts
