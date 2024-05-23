@@ -9,7 +9,7 @@
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@android:color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/inset_splashscreen</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/icon_splashscreen</item>
         <item name="postSplashScreenTheme">@style/Theme.Tandain</item>
     </style>
 

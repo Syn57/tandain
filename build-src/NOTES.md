@@ -42,3 +42,5 @@
    include(":convention")
    ```
 6. Rebuild th project
+## How add enable the binding
+Go to `AndroidApplicationConventionPlugin` then add the viewBinding inside ApplicationExtension

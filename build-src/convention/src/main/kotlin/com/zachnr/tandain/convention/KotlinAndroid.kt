@@ -1,6 +1,8 @@
 package com.zachnr.tandain.convention
 
+import com.android.build.api.dsl.BuildFeatures
 import com.android.build.api.dsl.CommonExtension
+import com.android.build.gradle.BaseExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPluginExtension
@@ -17,12 +19,7 @@ internal fun Project.configureKotlinAndroid(
         compileSdk = 34
 
         defaultConfig {
-            minSdk = 21
-        }
-
-        buildFeatures {
-            viewBinding = true
-            buildConfig = true
+            minSdk = 23
         }
 
         compileOptions {

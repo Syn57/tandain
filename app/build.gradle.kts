@@ -1,4 +1,4 @@
-import com.zachnr.tandain.convention.TandainBuildTypes
+//import com.zachnr.tandain.convention.TandainBuildTypes
 
 plugins {
 //    alias(libs.plugins.android.application)
@@ -10,6 +10,11 @@ plugins {
 
 android {
     namespace = "com.zachnr.tandain"
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.zachnr.tandain"
@@ -31,13 +36,13 @@ android {
     buildTypes {
 
         debug {
-            applicationIdSuffix = TandainBuildTypes.DEBUG.applicationIdSuffix
+//            applicationIdSuffix = TandainBuildTypes.DEBUG.applicationIdSuffix
         }
 
 
         release {
             isMinifyEnabled = false
-            applicationIdSuffix = TandainBuildTypes.RELEASE.applicationIdSuffix
+//            applicationIdSuffix = TandainBuildTypes.RELEASE.applicationIdSuffix
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
