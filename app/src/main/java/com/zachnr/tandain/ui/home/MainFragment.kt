@@ -1,6 +1,8 @@
 package com.zachnr.tandain.ui.home
 
+import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.navigation.fragment.NavHostFragment
@@ -27,7 +29,13 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         val navHostFragment =
             this.childFragmentManager.findFragmentById(R.id.fcv_main) as NavHostFragment
         val navController = navHostFragment.findNavController()
-        binding.bnMain.setupWithNavController(navController)
+
+        binding.apply {
+            bnMain.setupWithNavController(navController)
+            bnMain.post {
+                bnMain.setPadding(0,0,0,0)
+            }
+        }
     }
 
     companion object {
