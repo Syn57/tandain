@@ -6,6 +6,7 @@ plugins {
 //    alias(libs.plugins.ksp)
     alias(libs.plugins.tandain.android.application)
     alias(libs.plugins.tandain.android.application.flavors)
+    alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
@@ -55,6 +56,9 @@ android {
 dependencies {
 
     implementation(projects.core.uiresources)
+    implementation(projects.feature.finance)
+    implementation(projects.feature.home)
+    implementation(projects.feature.routefinder)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
