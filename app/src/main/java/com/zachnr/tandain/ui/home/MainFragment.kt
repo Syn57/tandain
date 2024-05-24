@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.view.updatePadding
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -32,8 +33,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
         binding.apply {
             bnMain.setupWithNavController(navController)
-            bnMain.post {
-                bnMain.setPadding(0,0,0,0)
+            bnMain.setOnApplyWindowInsetsListener { view, insets ->
+                view.updatePadding(bottom = 0)
+                insets
             }
         }
     }
