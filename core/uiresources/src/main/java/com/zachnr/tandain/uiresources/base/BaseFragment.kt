@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.zachnr.tandain.uiresources.utils.StatusBarMode
 
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
@@ -37,20 +38,29 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         _binding = null
     }
 
-    protected fun setStatusBarColor(isLight: Boolean = false) {
+    protected fun setStatusBarColor(state: StatusBarMode = StatusBarMode.SYSTEM_DEFAULT) {
         val configuration = resources.configuration
         val isDarkTheme =
             (configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
-        if (isLight) {
-            WindowInsetsControllerCompat(
-                requireActivity().window,
-                binding.root
-            ).isAppearanceLightStatusBars = false
-        } else {
-            WindowInsetsControllerCompat(
-                requireActivity().window,
-                binding.root
-            ).isAppearanceLightStatusBars = !isDarkTheme
+        when (state) {
+            StatusBarMode.LIGHT-> {
+                WindowInsetsControllerCompat(
+                    requireActivity().window,
+                    binding.root
+                ).isAppearanceLightStatusBars = false
+            }
+            StatusBarMode.DARK-> {
+                WindowInsetsControllerCompat(
+                    requireActivity().window,
+                    binding.root
+                ).isAppearanceLightStatusBars = true
+            }
+            else -> {
+                WindowInsetsControllerCompat(
+                    requireActivity().window,
+                    binding.root
+                ).isAppearanceLightStatusBars = !isDarkTheme
+            }
         }
     }
 }
