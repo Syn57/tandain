@@ -1,15 +1,18 @@
 plugins {
-//    alias(libs.plugins.android.library)
-//    alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.tandain.android.library)
 }
 
 android {
     namespace = "com.zachnr.tandain.finance"
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(projects.core.uiresources)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

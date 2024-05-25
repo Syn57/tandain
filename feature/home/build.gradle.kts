@@ -1,10 +1,11 @@
 plugins {
-//    alias(libs.plugins.android.library)
-//    alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.tandain.android.library)
 }
 
 android {
+    buildFeatures {
+        viewBinding = true
+    }
     namespace = "com.zachnr.tandain.home"
 }
 

@@ -4,6 +4,10 @@ plugins {
 
 android {
     namespace = "com.zachnr.tandain.routefinder"
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
