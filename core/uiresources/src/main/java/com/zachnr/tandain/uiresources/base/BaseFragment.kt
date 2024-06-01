@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.zachnr.tandain.uiresources.R
 import com.zachnr.tandain.uiresources.utils.StatusBarMode
 
 
@@ -31,6 +32,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setStatusBarColor()
+        setPaddingTop()
     }
 
     override fun onDestroyView() {
@@ -62,5 +64,14 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
                 ).isAppearanceLightStatusBars = !isDarkTheme
             }
         }
+    }
+
+    private fun setPaddingTop() {
+        binding.root.setPadding(
+            0,
+            0,
+            resources.getDimensionPixelSize(R.dimen.core_uiresources_margin_top),
+            0
+        )
     }
 }

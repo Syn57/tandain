@@ -17,7 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="24dp"
-            android:layout_marginTop="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView

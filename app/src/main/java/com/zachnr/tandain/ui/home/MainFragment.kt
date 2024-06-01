@@ -3,19 +3,27 @@ package com.zachnr.tandain.ui.home
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.core.view.updatePadding
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.zachnr.tandain.R
 import com.zachnr.tandain.databinding.FragmentMainBinding
-import com.zachnr.tandain.uiresources.base.BaseFragment
 
+class MainFragment : Fragment() {
 
-class MainFragment : BaseFragment<FragmentMainBinding>() {
+    private var _binding: FragmentMainBinding? = null
+    private val binding get() = _binding!!
 
-    override fun getBinding(layoutInflater: LayoutInflater): FragmentMainBinding {
-        return FragmentMainBinding.inflate(layoutInflater)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,6 +44,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 insets
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
