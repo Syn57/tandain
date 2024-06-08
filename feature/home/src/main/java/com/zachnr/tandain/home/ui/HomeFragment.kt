@@ -16,7 +16,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setStatusBarColor(StatusBarMode.LIGHT)
-
+        setPaddingTop()
     }
 
     companion object {

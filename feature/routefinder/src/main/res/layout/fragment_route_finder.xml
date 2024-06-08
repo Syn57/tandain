@@ -1,15 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.RouteFinderFragment">
+    tools:context=".ui.RouteFinderFragment"
+    tools:ignore="ResourceName">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="This is route findeer fragment" />
+        tools:context=".MapsActivity" />
 
-</FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp">
+
+            <TextView
+                android:id="@+id/tv_my_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_600"
+                android:includeFontPadding="false"
+                android:text="Warungku"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/ll_location"
+                app:layout_constraintEnd_toEndOf="@id/ll_location"
+                app:layout_constraintStart_toStartOf="@id/ll_location"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/location_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/dvdr"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_store">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_location_cycan" />
+
+                <TextView
+                    android:id="@+id/tv_current_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/quicksand_400"
+                    android:includeFontPadding="false"
+                    android:textSize="12sp"
+                    tools:text="Tebet, Jakarta Selatan" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dvdr"
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_all_store"
+                app:layout_constraintStart_toEndOf="@id/ll_location"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_all_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_500"
+                android:includeFontPadding="false"
+                android:text="@string/feature_routefinder_store_amount"
+                app:layout_constraintBottom_toTopOf="@id/iv_store"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dvdr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_store"
+                android:layout_width="22dp"
+                android:layout_height="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_store"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_store_number"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/tv_all_store"
+                app:layout_constraintTop_toBottomOf="@+id/tv_all_store" />
+
+            <TextView
+                android:id="@+id/tv_store_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/quicksand_400"
+                android:includeFontPadding="false"
+                tools:text="@string/feature_routefinder_store_number_placeholder"
+                app:layout_constraintBottom_toBottomOf="@id/iv_store"
+                app:layout_constraintEnd_toEndOf="@id/tv_all_store"
+                app:layout_constraintStart_toEndOf="@id/iv_store"
+                app:layout_constraintTop_toTopOf="@id/iv_store" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

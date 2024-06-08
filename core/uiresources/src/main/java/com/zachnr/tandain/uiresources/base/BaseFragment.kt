@@ -32,7 +32,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setStatusBarColor()
-        setPaddingTop()
     }
 
     override fun onDestroyView() {
@@ -66,11 +65,11 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         }
     }
 
-    private fun setPaddingTop() {
+    protected fun setPaddingTop() {
         binding.root.setPadding(
             0,
-            0,
             resources.getDimensionPixelSize(R.dimen.core_uiresources_margin_top),
+            0,
             0
         )
     }

@@ -3,6 +3,10 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+
+    }
+    dependencies {
+        classpath(libs.secrets.gradle.plugin)
     }
 }
 plugins {
@@ -14,4 +18,5 @@ plugins {
     alias(libs.plugins.dependencyGuard) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.room) apply false
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin) apply false
 }

@@ -3,4 +3,6 @@
     <string name="menu_main_home_title">Home</string>
     <string name="menu_main_location_title">My warungs</string>
     <string name="menu_main_finance_title">Finance</string>
+    <string name="feature_routefinder_store_number_placeholder">305</string>
+    <string name="feature_routefinder_store_amount">Total toko</string>
 </resources>
