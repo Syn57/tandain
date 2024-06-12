@@ -5,6 +5,7 @@ plugins {
 //    alias(libs.plugins.jetbrains.kotlin.android)
 //    alias(libs.plugins.ksp)
     alias(libs.plugins.tandain.android.application)
+    alias(libs.plugins.tandain.android.application.compose)
     alias(libs.plugins.tandain.android.application.flavors)
 }
 
@@ -59,6 +60,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.compose.material3.windowSizeClass)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.navigation.compose)
+    debugImplementation(libs.androidx.compose.ui.testManifest)
+
 
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.core.splashscreen)

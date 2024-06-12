@@ -36,6 +36,10 @@ dependencies {
 
 gradlePlugin {
     plugins {
+        register("androidApplicationCompose") {
+            id = "tandain.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
         register("androidApplication") {
             id = "tandain.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
