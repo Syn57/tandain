@@ -48,6 +48,10 @@ gradlePlugin {
             id = "tandain.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("androidLibraryCompose") {
+            id = "tandain.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
         register("androidFeature") {
             id = "tandain.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"

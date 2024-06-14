@@ -26,7 +26,7 @@ constraintlayout = "2.1.4"
 coreKtx = "1.13.1"
 dependencyGuard = "0.4.3"
 espressoCore = "3.5.1"
-io-insert-koin = "3.4.3"
+io-insert-koin = "3.5.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 kotlin = "1.9.21"
@@ -85,6 +85,7 @@ com-squareup-retrofit2-converter-gson = { group = "com.squareup.retrofit2", name
 com-squareup-retrofit2-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "com-squareup-retrofit2" }
 io-insert-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "io-insert-koin" }
 io-insert-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "io-insert-koin" }
+io-insert-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "io-insert-koin"}
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 
@@ -114,6 +115,7 @@ tandain-android-application-compose = { id = "tandain.android.application.compos
 tandain-android-application-flavors = { id = "tandain.android.application.flavors", version = "unspecified" }
 tandain-android-feature = { id = "tandain.android.feature", version = "unspecified" }
 tandain-android-library = { id = "tandain.android.library", version = "unspecified" }
+tandain-android-library-compose = { id = "tandain.android.library.compose", version = "unspecified" }
 tandain-android-room = { id = "tandain.android.room", version = "unspecified" }
 tandain-android-test = { id = "tandain.android.test", version = "unspecified" }
 tandain-jvm-library = { id = "tandain.jvm.library", version = "unspecified" }

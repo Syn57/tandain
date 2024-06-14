@@ -51,6 +51,7 @@ android {
 dependencies {
 
     implementation(projects.core.uiresources)
+    implementation(projects.core.designsystem)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -87,5 +88,6 @@ dependencies {
     releaseImplementation(libs.com.github.chuckerteam.chucker.library.no.op)
     implementation(libs.io.insert.koin.android)
     implementation(libs.io.insert.koin.core)
+    implementation(libs.io.insert.koin.compose)
 
 }
